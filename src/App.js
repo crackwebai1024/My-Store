@@ -1,4 +1,5 @@
 import React from 'react';
+import { Switch, Route } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar';
 import ProductList from './components/ProductList';
@@ -9,10 +10,12 @@ function App() {
   return (
     <React.Fragment>
       <Navbar />
-      <ProductList />
-      <Details />
-      <Cart />
-      <Default />
+      <Switch>
+        <Route path="/details" component={Details} />
+        <Route path="/cart" component={Cart} />
+        <Route path="/" component={ProductList} />
+        <Route component={Default} />
+      </Switch>
     </React.Fragment>
   );
 }
