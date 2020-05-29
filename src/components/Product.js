@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
 
 class Product extends Component {
+
+
     render() {
         return (
-            <div>
-                <h3>hello from product</h3>
-            </div>
-        );
+            <React.Fragment>
+                <div className="py-5">
+                    <div className="container">
+                        <div className="row"></div>
+                    </div>
+                </div>
+            </React.Fragment>
+        )
     }
 }
 
